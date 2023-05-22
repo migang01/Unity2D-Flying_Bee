@@ -289,10 +289,7 @@ public class Bee : MonoBehaviour
             if ((lastIndex != 0 || (lastIndex == 0 && wayPoints.Count == 1)) && transform.position == wayPoints[lastIndex].transform.position)
             {
                 lr.positionCount = 1;
-                // 왜 실행이 안되는걸까?
-                // 마지막 waypoint에 생기게 했는데도 안없어지네...
-                // 벌의 위치가 마지막 포인트와 같지가 않나봄. 어케 해결하지...
-                // 해결. lastPoints 라는 list를 만들고 0번째 인덱스에 저장후에 그걸 그냥 destroy했음.
+               
                 Destroy(lastPoints[0]);
                 lastPoints.Clear();
                 lr.enabled = false;
